@@ -18,5 +18,5 @@ make all
 
 ## Usage
 ```bash
-bin/hf-datasets-path rotten_tomatoes
+hf-datasets-path rotten_tomatoes
 ```

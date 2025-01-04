@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/labstack/gommon/log"
 	"github.com/qiuzhanghua/common/hf"
 )
 
@@ -13,7 +14,10 @@ func main() {
 	}
 	dsName := os.Args[1]
 
-	answer, _ := hf.HfDatasetsPath(dsName)
+	answer, err := hf.HfDatasetsPath(dsName)
+	if err != nil {
+		log.Errorf("Error: %v", err)
+	}
 
 	fmt.Print(answer)
 }
